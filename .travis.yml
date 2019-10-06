@@ -4,7 +4,7 @@ services:
 before_install:
   - docker build -t jjino/nginx-ubuntu:v1.1 .
 script:
-  - echo "$docker_password" | docker login -u "$docker_username" --password-stdin
+  - echo "$password" | docker login -u "$username" --password-stdin
   - docker images
   - docker push jjino/nginx-ubuntu:v1.1
 notifications:
